@@ -6,7 +6,6 @@ pipeline {
             steps {
                  sh "./gradlew test assemble"
             }
-
             post {
                 success {
                     junit 'build/test-results/test/*.xml'

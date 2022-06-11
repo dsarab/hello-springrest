@@ -11,6 +11,7 @@ pipeline {
                     junit 'build/test-results/test/*.xml'
                     archiveArtifacts 'build/libs/*.jar'
                 }
+
             }
         }
     }

@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                 sh "./gradlew test assemble"
+                 //sh "./gradlew test assemble"
+                    withGradle {
+                      sh "./gradlew test assemble"
+                    }
             }
             post {
                 success {
